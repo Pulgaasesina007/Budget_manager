@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
+    <link href="{% static './css/registro_usuario.css'%}" rel="stylesheet" />
+
+    <title>Registro de nuevo usuario</title>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="nombres">
+            {{ form.nombres.label_tag }}
+            {{ form.nombres }}
+        </div>
+
+        <div class="apellidos">
+            {{ form.apellidos.label_tag }}
+            {{ form.apellidos }}
+        </div>
+
+        <div class="cedula">
+            {{ form.cedula.label_tag }}
+            {{ form.cedula }}
+        </div>
+
+        <div class=" fechanac ">
+            {{ form.fecha_nacimiento.label_tag }}
+            {{ form.fecha_nacimiento }}
+        </div>
+
+        <div class="correo">
+            {{ form.correo.label_tag }}
+            {{ form.correo }}
+        </div>
+
+        <div class="telefono">
+            {{ form.telefono.label_tag }}
+            {{ form.telefono }}
+        </div>
+
+        <div class="nombreusuario">
+            {{ form.nomusuario.label_tag }}
+            {{ form.nomusuario }}
+        </div>
+
+        <div class="contraseña">
+            {{ form.contraseña.label_tag }}
+            {{ form.contraseña }}
+        </div>
+
+        <div class="confirmarcontra">
+            {{ form.confirmacion.label_tag }}
+            {{ form.confirmacion }}
+        </div>
+
+        <div class="botonverde">
+            <button type="submit">Registrar</button>
+        </div>
+    </form>
+
+    <div class="barraceleste"></div>
+
+    <span class="nomproyecto">BUDGET MASTER</span>
+    <a href="" class="inicio">Inicio</a>
+    <span class="separador"> > </span>
+    <div class="iconoSalir"></div>
+
+    <a href="" class="registrousuario">Registro de usuario</a>
+    <div class="imagenusuario"></div>
+
+    <span class="registronuevo">Registro de nuevo usuario</span>
+</body>
+
+</html>

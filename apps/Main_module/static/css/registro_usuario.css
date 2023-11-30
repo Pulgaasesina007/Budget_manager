@@ -1,9 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -18,8 +18,9 @@ input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: rgba(195,207,237,1);
-  
+  background-color: rgba(195, 207, 237, 1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .name-input-group {
@@ -31,23 +32,21 @@ input {
   flex: 1;
 }
 
-
-.nombres {
-  width: 154px;
-  color: rgba(0,0,0,1);
+.Nombres {
+  width: 400px;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 90px;
   left: 360px;
   font-family: Work Sans;
-  font-weight: Regular;
   font-size: 20px;
   opacity: 1;
   text-align: left;
 }
 
 .apellidos {
-  width: 154px;
-  color: rgba(0,0,0,1);
+  width: 330%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 90px;
   left: 800px;
@@ -57,9 +56,10 @@ input {
   opacity: 1;
   text-align: left;
 }
+
 .cedula {
-  width: 109px;
-  color: rgba(0,0,0,1);
+  width: 370%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 160px;
   left: 360px;
@@ -69,9 +69,10 @@ input {
   opacity: 1;
   text-align: left;
 }
-.fechanac  {
-  width: 336px;
-  color: rgba(0,0,0,1);
+
+.fechanac {
+  width: 120%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 230px;
   left: 360px;
@@ -83,8 +84,8 @@ input {
 }
 
 .correo {
-  width: 114px;
-  color: rgba(0,0,0,1);
+  width: 790%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 300px;
   left: 360px;
@@ -94,9 +95,10 @@ input {
   opacity: 1;
   text-align: left;
 }
+
 .nombreusuario {
-  width: 400px;
-  color: rgba(0,0,0,1);
+  width: 225%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 440px;
   left: 360px;
@@ -106,9 +108,10 @@ input {
   opacity: 1;
   text-align: left;
 }
+
 .telefono {
-  width: 143px;
-  color: rgba(0,0,0,1);
+  width: 630%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 370px;
   left: 360px;
@@ -118,10 +121,11 @@ input {
   opacity: 1;
   text-align: left;
 }
+
 .contraseña {
-  width: 400px;
-  color: rgba(0,0,0,1);
-  position:absolute;
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
   top: 510px;
   left: 360px;
   font-family: Work Sans;
@@ -130,9 +134,10 @@ input {
   opacity: 1;
   text-align: left;
 }
+
 .confirmarcontra {
-  width: 400px;
-  color: rgba(0,0,0,1);
+  width: 115%;
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 510px;
   left: 800px;
@@ -146,7 +151,7 @@ input {
 .botonverde {
   width: 98%;
   height: 50px;
-  background: rgba(67,168,84,1);
+  background: rgba(67, 168, 84, 1);
   opacity: 1;
   position: absolute;
   top: 580px;
@@ -159,6 +164,7 @@ input {
   overflow: hidden;
   left: 14px;
 }
+
 .botonverde button {
   width: 95%;
   height: 95%;
@@ -173,7 +179,7 @@ input {
 .barraceleste {
   width: 100%;
   height: 50px;
-  background: rgba(112,156,224,1);
+  background: rgba(112, 156, 224, 1);
   opacity: 1;
   position: absolute;
   top: 16px;
@@ -183,7 +189,7 @@ input {
 
 .nomproyecto {
   width: 194px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 10px;
   left: 23px;
@@ -193,9 +199,10 @@ input {
   opacity: 1;
   text-align: left;
 }
+
 .inicio {
   width: 84px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 70px;
   left: 33px;
@@ -209,7 +216,7 @@ input {
 
 .registrousuario {
   width: 303px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 70px;
   left: 110px;
@@ -220,14 +227,14 @@ input {
   text-align: left;
   text-decoration: none;
 }
+
 .separador {
   color: #000;
-  font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
-  margin: 0 90px; /* Ajusta el espaciado entre el símbolo y los enlaces según tus necesidades */
-  position: absolute; /* Asegura que el elemento se posicione de manera absoluta */
-  top: 70px; /* Ajusta la posición desde la parte superior según tus necesidades */
+  font-size: 20px;
+  margin: 0 90px;
+  position: absolute;
+  top: 70px;
 }
-
 
 .imagenusuario {
   width: 300px;
@@ -235,7 +242,7 @@ input {
   background: url("../images/v905_3.png");
   background-repeat: no-repeat;
   background-position: left;
-  background-size:auto;
+  background-size: auto;
   opacity: 1;
   position: absolute;
   top: 230px;
@@ -245,7 +252,7 @@ input {
 
 .registronuevo {
   width: 250px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 150px;
   left: 27px;
@@ -256,29 +263,31 @@ input {
   text-align: left;
   font-weight: bold;
 }
+
 .iconoSalir {
-  width: 30px; /* Ajusta el ancho según tus necesidades */
-  height: 30px; /* Ajusta la altura según tus necesidades */
+  width: 30px;
+  height: 30px;
   background: url("../images/salir.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; /* Utiliza "contain" para asegurar que la imagen se ajuste dentro del contenedor */
+  background-size: contain;
   opacity: 1;
   position: absolute;
-  top: 70px; /* Ajusta la posición desde la parte superior */
-  right: 5px; /* Ajusta la posición desde la derecha */
+  top: 70px;
+  right: 5px;
   overflow: hidden;
 }
+
 .iconoCalendario {
-  width: 30px; /* Ajusta el ancho según tus necesidades */
-  height: 30px; /* Ajusta la altura según tus necesidades */
+  width: 30px;
+  height: 30px;
   background: url("../images/calendario.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; /* Utiliza "contain" para asegurar que la imagen se ajuste dentro del contenedor */
+  background-size: contain;
   opacity: 1;
   position: absolute;
-  top: 255px; /* Ajusta la posición desde la parte superior */
-  left: 770px; /* Ajusta la posición desde la derecha */
+  top: 255px;
+  left: 770px;
   overflow: hidden;
 }
