@@ -1,0 +1,28 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/Login_usuario.css' %}"> <!-- Cambié la ruta del archivo CSS -->
+  <title>Formulario Registro</title>
+</head>
+<body>
+  <section class="form-register">
+    <div class="form-left">
+      <img src="{% static 'images/login_image.jpg' %}" alt="Imagen de usuario"> <!-- Agrega aquí la ruta de tu imagen -->
+    </div>
+    <div class="form-right">
+      <h4>Formulario Registro</h4>
+      <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre de usuario">
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+      <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+      <input class="botons" type="submit" value="Registrar">
+        <p><a class="black-link" href="#">¿Ya tengo Cuenta?</a></p>
+
+    </div>
+  </section>
+</body>
+</html>

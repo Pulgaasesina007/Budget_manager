@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  label {
+    margin-bottom: 5px;
+    width: 200px;
+  }
+  
+  input {
+    padding: 8px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(195, 207, 237, 1);
+  }
+  
+  
+  .inicio {
+    width: 84px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 70px;
+    left: 33px;
+    font-family: Work Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+    text-decoration: none;
+    
+  }
+  /* .enlacebalance {
+    width: 84px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 70px;
+    left: 390px;
+    font-family: Work Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+    text-decoration: none; */
+    
+  
+  .separador1 {
+    color: #000;
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    margin: 0 95px; /* Ajusta el espaciado entre el símbolo y los enlaces según tus necesidades */
+    position: absolute; /* Asegura que el elemento se posicione de manera absoluta */
+    top: 70px; /* Ajusta la posición desde la parte superior según tus necesidades */
+  }
+    
+  .barraceleste {
+    width: 100%;
+    height: 50px;
+    background: rgba(112,156,224,1);
+    opacity: 1;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .nomproyecto {
+    width: 194px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 10px;
+    left: 23px;
+    font-family: Zen Dots;
+    font-weight: Regular;
+    font-size: 26px;
+    opacity: 1;
+    text-align: left;
+  }
+  .iconoSalir {
+    width: 30px; /* Ajusta el ancho según tus necesidades */
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    background: url("../images/salir.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Utiliza "contain" para asegurar que la imagen se ajuste dentro del contenedor */
+    opacity: 1;
+    position: absolute;
+    top: 70px; /* Ajusta la posición desde la parte superior */
+    right: 5px; /* Ajusta la posición desde la derecha */
+    overflow: hidden;
+  }
+  .botonverde {
+    width: 98%;
+    height: 50px;
+    background: rgba(67,168,84,1);
+    opacity: 1;
+    position: absolute;
+    top: 580px;
+    left: 33px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: center center;
+    overflow: hidden;
+    left: 14px;
+  }
+  .iconoCalendario1 {
+    width: 30px; /* Ajusta el ancho según tus necesidades */
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    background: url("../images/calendario.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Utiliza "contain" para asegurar que la imagen se ajuste dentro del contenedor */
+    opacity: 1;
+    position: absolute;
+    top: 330px; /* Ajusta la posición desde la parte superior */
+    left: 885px; /* Ajusta la posición desde la derecha */
+    overflow: hidden;
+  }
+  .iconoCalendario2 {
+    width: 30px; /* Ajusta el ancho según tus necesidades */
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    background: url("../images/calendario.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Utiliza "contain" para asegurar que la imagen se ajuste dentro del contenedor */
+    opacity: 1;
+    position: absolute;
+    top: 380px; /* Ajusta la posición desde la parte superior */
+    left: 885px; /* Ajusta la posición desde la derecha */
+    overflow: hidden;
+  }
+  .balanceIngresosygastos {
+    width: 303px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 70px;
+    left: 110px;
+    font-family: Work Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .botonAzul {
+    width: 346px;
+    height: 70px;
+    background: rgba(91,105,226,1);
+    opacity: 1;
+    position: absolute;
+    top: 460px;
+    left: 576px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+  }
+  .obtenerBalance {
+    width: 319px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 470px;
+    left: 608px;
+    font-family: Work Sans;
+    font-weight: SemiBold Italic;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .textoDesde {
+    width: 400px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 330px;
+    left: 580px;
+    font-family: 'Work Sans';
+    font-weight: Regular;
+    font-size: 25px; /* Ajusta el tamaño del texto según tus necesidades */
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .textoHasta {
+    width: 400px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 380px;
+    left: 580px;
+    font-family: 'Work Sans';
+    font-weight: Regular;
+    font-size: 25px; /* Ajusta el tamaño del texto según tus necesidades */
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .textoCategoria {
+    width: 236px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 180px;
+    left: 315px;
+    font-family: Work Sans;
+    font-weight: Regular;
+    font-size: 32px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .textoBalance {
+    width: 131px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 110px;
+    left: 25px;
+    font-family: Work Sans;
+    font-weight: Regular;
+    font-size: 32px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  
+  
+  
+  
+  

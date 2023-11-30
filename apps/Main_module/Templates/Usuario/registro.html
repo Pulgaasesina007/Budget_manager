@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
+    <link href="{% static './css/registro_usuario.css'%}" rel="stylesheet" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="URL_del_script_de_procesamiento" method="método_de_envío">
+        <div class="form-group name-input-group">
+            <label for="firstName" class="nombres">Nombres:
+                <input type="text" id="firstName" style="width: 400px;" name="firstName" required />
+            </label>
+
+            <label for="lastName" class="apellidos">Apellidos:
+                <input type="text" id="lastName" style="width: 300%;" name="lastName" required />
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="cedula" class="cedula">Cédula:
+                <input type="text" id="cedula" style="width: 370%;" name="cedula" required />
+            </label>
+
+            <label for="birthdate" class="fechanac">Fecha de nacimiento:
+                <input type="date" id="birthdate" style="width: 120%;" name="birthdate" required />
+            </label>
+            <div class="iconoCalendario"></div>
+
+            <label for="email" class="correo">Correo:
+                <input type="email" id="email" style="width: 790%;" name="email" required />
+            </label>
+
+            <label for="phone" class="telefono">Teléfono:
+                <input type="tel" id="phone" name="phone" style="width: 630%;" required />
+            </label>
+
+            <label for="usua" class="nombreusuario">Nombre de usuario:
+                <input type="nomusu" id="usua" name="usua" style="width: 225%;" required />
+            </label>
+
+            <label for="contra" class="contraseña">Contraseña:
+                <input type="contrase" id="contra" name="contra"style="width: 100%;" required />
+            </label>
+
+            <label for="conf" class="confirmarcontra">Confirmar contraseña:
+                <input type="confirmacion" id="conf" name="conf" style="width: 115%;" required />
+            </label>
+        </div>
+        </div>
+
+
+        <div class="botonverde">
+            <button type="submit" class="">Registrar</button>
+        </div>
+
+        <div class="barraceleste"></div>
+
+
+        <span class="nomproyecto">BUDGET MASTER</span>
+        <a href="url_de_la_pagina_de_inicio" class="inicio">Inicio</a>
+        <span class="separador"> > </span>
+        <div class="iconoSalir"></div>
+
+        <a href="url_de_la_pagina_de_registro" class="registrousuario">Registro de usuario</a>
+        <div class="imagenusuario"></div>
+
+
+
+
+        <span class="registronuevo">Registro de nuevo usuario</span>
+    </div>
+</body>
+
+</html>

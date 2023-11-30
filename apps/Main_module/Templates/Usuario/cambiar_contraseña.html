@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
+    <link href="{% static 'css/cambiar_contraseña.css'%}" rel="stylesheet" />
+    
+    <title>Cambiar Contraseña</title>
+</head>
+
+<body>
+    <form action="URL_del_script_de_procesamiento" method="método_de_envío">
+        <div class="form-group">
+            <label for="act" class="actual">Actual:
+                <input type="text" id="act" style="width: 370%;" name="act" required />
+            </label>
+
+            <label for="" class="nuevacontraseña">Nueva contraseña:
+                <input type="text" id="nwcontra"  name="nwcontra" required />
+            </label>
+
+            <label for="" class="confirmarcontraseña">Confirmar contraseña:
+                <input type="text" id="confcontra"  name="confcontra" required />
+            </label>
+
+           
+        </div>
+        
+                     
+        
+        <div class="botonverde">
+            <button type="submit" class="guardarcambios">Guardar cambios</button>
+        </div>
+        
+        <div class="barraceleste"></div>
+        
+        
+        <span class="nomproyecto">BUDGET MASTER</span>
+        <a href="url_de_la_pagina_de_inicio" class="inicio">Inicio</a>
+        <span class="separador1"> > </span>
+        <div class="iconoSalir"></div>
+       
+        <span class="cambiarcontraseña1">Cambiar contraseña</span>
+        <a href="url_de_la_pagina_de_registro" class="enlaceperfil">Perfil</a>
+        
+        <span class="separador2"> > </span>
+
+        <b>
+           <span class="perfil">Perfil</span> 
+        </b>
+        
+
+        
+        <!-- <div class="fondoactualizar"></div> -->
+        <a href="url_de_la_pagina_de_registro" class="actualizar">Actualizar datos</a>
+        <!-- <div class="fondocambcontraseña"></div> -->
+        <a href="url_de_la_pagina_de_registro" class="cambiarcontraseña">Cambiar contraseña</a>
+        <!-- <div class="fondocerrarsesion"></div> -->
+        <a href="url_de_la_pagina_de_registro" class="cerrarsesión">Cerrar sesión</a>
+
+        
+        <span class="imgcorchete"></span>
+        <div class="reglascontraseña">
+            <p ><span class="puntoverde"></span>Como minimo 10 caracteres. </p>
+            <p> <span class="puntoverde"></span>Contenga letras mayusculas y minusculas </p>
+            <p> <span class="puntoverde"></span>Contenga numero</p>
+            <p> <span class="puntoverde"></span>Deben coincidir las dos contraseñas</p>
+
+        </div> 
+
+        <!-- Para modo cerrar sesion -->
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>¿Estás seguro de que deseas cerrar sesión?</p>
+                <button onclick="logout()">Cerrar Sesión</button>
+                <button onclick="closeModal()">Cancelar</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

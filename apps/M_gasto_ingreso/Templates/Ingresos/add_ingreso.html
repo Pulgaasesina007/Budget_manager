@@ -1,0 +1,113 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"  href="{% static 'css/ingreso.css' %}" />
+    <title>Ingresos</title>
+    
+</head>
+
+<body>
+
+  <form action="URL_del_script_de_procesamiento" method="método_de_envío">
+      <div class="form-group">
+          <div class="textoselect"> 
+              <label for="categoria">
+                <select id="categoria" name="categoria" style="width: 230px; height: 45px; font-size: 20px;">
+                    <option value="sueldo">Sueldo</option>
+                    <option value="ingresosExtras">Ingresos extras</option>
+                    <option value="rentas">Rentas</option>
+                    <option value="negocio">Negocio</option>
+                    <option value="bonos">Bonos</option>
+                    <option value="comisiones">Comisiones</option>
+                    <option value="sotros">Otros</option>
+                    
+                </select>
+              </label>
+          </div>
+          
+          <div class="descripcion">
+            <label for="descripcion" class="textodescripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" />
+          </div>
+          <div class="linea-input1"></div>
+          
+          <div class="valor-dinero">
+            <label for="valorDinero" class="texto-valor-dinero">$0,00</label>
+            <input type="text" id="valorDinero" name="valorDinero" onclick="borrarTextoValor()" />
+            <div class="linea-valor-dinero"></div>
+          </div>
+
+          <div class="linea-input2"></div>
+          
+
+              <label for="fechaDesde" class="textoFecha">
+                <input type="date" id="fechaDesde" style="width: 200px; height: 45px; " name="fechaDesde"  required />
+              </label>
+              
+              
+                                                      
+      </div>
+      <div class="botonAzul">
+            
+      </div>
+      <b>
+        <i>
+          <button class="botonIngresos">
+              <span class="textoBotonagregar">Agregar ingresos <span class="iconomas"></span></span>
+
+          </button>
+          
+        </i>
+      </b>
+      <div class="botonverde">
+        <span class="texto-ingreso-mensual">Total de ingreso mensual</span>
+        <span class="monto-ingreso-mensual">$0.00</span>
+      </div>
+      <div class="iconoCalendario1"></div>
+      <div class="iconocasita"></div>
+
+      <div>
+
+      </div>
+      
+           
+      <div class="barraceleste"></div>
+      <span class="nomproyecto">BUDGET MASTER</span>
+
+      <b>
+        <i>
+          <span class="textoAgregaringresos">Agregar ingresos</span>
+        </i>
+
+      </b>
+      <a href="agregar_gasto/" class="registroIngresosygastos">Registrar ingresos y gastos</a>
+      <a href="/apps/Main_module/static" class="inicio">Inicio</a>
+      <a href="" class="enlaceAgregaringresos">Agregar ingresos</a>
+
+      <span class="separador1">></span>
+      <span class="separador2">></span>
+      
+      <span class="iconoSalir"></span>
+      <button class="listas-ingresos-btn">Listas de Ingresos</button>
+      <button class="categoria-btn">Categoría</button>
+
+      
+      
+
+  
+
+
+  </form>
+
+        
+
+</body>
+
+</html>

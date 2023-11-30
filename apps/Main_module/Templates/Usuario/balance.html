@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/balance.css'%}" />
+    <title>Balance</title>
+    
+</head>
+
+<body>
+
+  <form action="URL_del_script_de_procesamiento" method="método_de_envío">
+      <div class="form-group">
+          <div class="textoCategoria">Categoría: 
+              <label for="categoria">
+                <select id="categoria" name="categoria" style="width: 230px; height: 45px; font-size: 20px;">
+                    <option >Seleccione</option>
+                    <option value="gastos">Gastos</option>
+                    <option value="ingresos">Ingresos</option>
+                </select>
+              </label>
+          </div>    
+
+              <label for="fechaDesde" class="textoDesde">Desde:
+                <input type="date" id="fechaDesde" style="width: 200px; " name="fechaDesde"  required />
+              </label>
+
+              <label for="fechaHasta" class="textoHasta">Hasta :
+                <input type="date" id="fechaHasta" style="width: 200px; " name="fechaHasta"  required />
+              </label>
+
+                          
+      </div>
+  </form>
+
+        <div class="botonAzul"></div>
+        <b>
+          <i>
+            <span class="obtenerBalance">Obtener balance</span>
+          </i>
+        </b>
+        <div class="botonverde"></div>
+        <div class="iconoCalendario1"></div>
+        <!-- <div class="fechaInicial"></div>
+        <div class="fechaFinal"></div> -->
+        <div class="iconoCalendario2"></div>
+        <!-- <span class="textoDesde">Desde:</span>
+        <span class="textoHasta">Hasta:</span> -->
+        
+        <div class="barraceleste"></div>
+        <span class="nomproyecto">BUDGET MASTER</span>
+
+        <b>
+          <i>
+            <span class="textoBalance">Balance</span>
+          </i>
+
+        </b>
+        <a href="/" class="inicio">Inicio</a>
+        <a href="url_de_la_pagina_de_inicio" class="balanceIngresosygastos">Balance de ingresos y gastos</a>
+        
+        
+
+        <span class="separador1">></span>
+
+        <span class="iconoSalir"></span>
+
+    
+
+</body>
+
+</html>
