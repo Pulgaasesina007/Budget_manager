@@ -1,293 +1,71 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+form {
+  position: relative;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-label {
-  margin-bottom: 5px;
-}
-
-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(195, 207, 237, 1);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.name-input-group {
-  display: flex;
-  gap: 10px;
-}
-
-.name-input-group label {
-  flex: 1;
-}
-
-.Nombres {
-  width: 400px;
-  color: rgba(0, 0, 0, 1);
+.div-nombres {
   position: absolute;
-  top: 90px;
-  left: 360px;
-  font-family: Work Sans;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
+  top: 50px;
+  left: 20px;
 }
 
-.apellidos {
-  width: 330%;
-  color: rgba(0, 0, 0, 1);
+.div-apellidos {
   position: absolute;
-  top: 90px;
-  left: 800px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
+  top: 100px;
+  left: 20px;
 }
 
-.cedula {
-  width: 370%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 160px;
-  left: 360px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.fechanac {
-  width: 120%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 230px;
-  left: 360px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.correo {
-  width: 790%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 300px;
-  left: 360px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.nombreusuario {
-  width: 225%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 440px;
-  left: 360px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.telefono {
-  width: 630%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 370px;
-  left: 360px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.contraseña {
-  width: 100%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 510px;
-  left: 360px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.confirmarcontra {
-  width: 115%;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 510px;
-  left: 800px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.botonverde {
-  width: 98%;
-  height: 50px;
-  background: rgba(67, 168, 84, 1);
-  opacity: 1;
-  position: absolute;
-  top: 580px;
-  left: 33px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: center center;
-  overflow: hidden;
-  left: 14px;
-}
-
-.botonverde button {
-  width: 95%;
-  height: 95%;
-  border: none;
-  background: none;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.barraceleste {
-  width: 100%;
-  height: 50px;
-  background: rgba(112, 156, 224, 1);
-  opacity: 1;
-  position: absolute;
-  top: 16px;
-  left: 0px;
-  overflow: hidden;
-}
-
-.nomproyecto {
-  width: 194px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 10px;
-  left: 23px;
-  font-family: Zen Dots;
-  font-weight: Regular;
-  font-size: 26px;
-  opacity: 1;
-  text-align: left;
-}
-
-.inicio {
-  width: 84px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 70px;
-  left: 33px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-  text-decoration: none;
-}
-
-.registrousuario {
-  width: 303px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 70px;
-  left: 110px;
-  font-family: Work Sans;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-  text-decoration: none;
-}
-
-.separador {
-  color: #000;
-  font-size: 20px;
-  margin: 0 90px;
-  position: absolute;
-  top: 70px;
-}
-
-.imagenusuario {
-  width: 300px;
-  height: 342px;
-  background: url("../images/v905_3.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: auto;
-  opacity: 1;
-  position: absolute;
-  top: 230px;
-  left: 53px;
-  overflow: hidden;
-}
-
-.registronuevo {
-  width: 250px;
-  color: rgba(0, 0, 0, 1);
+.div-cedula {
   position: absolute;
   top: 150px;
-  left: 27px;
-  font-family: Work Sans;
-  font-weight: SemiBold Italic;
-  font-size: 36px;
-  opacity: 1;
-  text-align: left;
-  font-weight: bold;
+  left: 20px;
 }
 
-.iconoSalir {
-  width: 30px;
-  height: 30px;
-  background: url("../images/salir.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: 1;
+.div-fecha-nacimiento {
   position: absolute;
-  top: 70px;
-  right: 5px;
-  overflow: hidden;
+  top: 200px;
+  left: 20px;
 }
 
-.iconoCalendario {
-  width: 30px;
-  height: 30px;
-  background: url("../images/calendario.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: 1;
+.div-correo {
   position: absolute;
-  top: 255px;
-  left: 770px;
-  overflow: hidden;
+  top: 250px;
+  left: 20px;
+}
+
+.div-telefono {
+  position: absolute;
+  top: 300px;
+  left: 20px;
+}
+
+.div-nombre-usuario {
+  position: absolute;
+  top: 350px;
+  left: 20px;
+}
+
+.div-contraseña {
+  position: absolute;
+  top: 400px;
+  left: 20px;
+}
+
+.div-confirmar-contraseña {
+  position: absolute;
+  top: 450px;
+  left: 20px;
+}
+
+.div-boton {
+  text-align: center;
+  top: 500px;
+  left: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: green;
+  color: white;
+  border-radius: 5px;
 }

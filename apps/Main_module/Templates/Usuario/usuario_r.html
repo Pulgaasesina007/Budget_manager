@@ -15,58 +15,52 @@
 </head>
 
 <body>
-    <form method="POST">
-        {% csrf_token %}
+   <form method="post">
+  {% csrf_token %}
+ <div class="div-boton">
+    <button type="submit">Registrarse</button>
+  </div>
 
-        <div class="nombres">
-            {{ form.nombres.label_tag }}
-            {{ form.nombres }}
-        </div>
 
-        <div class="apellidos">
-            {{ form.apellidos.label_tag }}
-            {{ form.apellidos }}
-        </div>
 
-        <div class="cedula">
-            {{ form.cedula.label_tag }}
-            {{ form.cedula }}
-        </div>
+  <div class="div-nombres">
+    {{ form.nombres }}
+  </div>
 
-        <div class=" fechanac ">
-            {{ form.fecha_nacimiento.label_tag }}
-            {{ form.fecha_nacimiento }}
-        </div>
+  <div class="div-apellidos">
+    {{ form.apellidos }}
+  </div>
 
-        <div class="correo">
-            {{ form.correo.label_tag }}
-            {{ form.correo }}
-        </div>
+  <div class="div-cedula">
+    {{ form.cedula }}
+  </div>
 
-        <div class="telefono">
-            {{ form.telefono.label_tag }}
-            {{ form.telefono }}
-        </div>
+  <div class="div-fecha-nacimiento">
+    {{ form.fecha_nacimiento }}
+  </div>
 
-        <div class="nombreusuario">
-            {{ form.nomusuario.label_tag }}
-            {{ form.nomusuario }}
-        </div>
+  <div class="div-correo">
+    {{ form.correo }}
+  </div>
 
-        <div class="contraseña">
-            {{ form.contraseña.label_tag }}
-            {{ form.contraseña }}
-        </div>
+  <div class="div-telefono">
+    {{ form.telefono }}
+  </div>
 
-        <div class="confirmarcontra">
-            {{ form.confirmacion.label_tag }}
-            {{ form.confirmacion }}
-        </div>
+  <div class="div-nombre-usuario">
+    {{ form.nomusuario }}
+  </div>
 
-        <div class="botonverde">
-            <button type="submit">Registrar</button>
-        </div>
-    </form>
+  <div class="div-contraseña">
+    {{ form.contraseña }}
+  </div>
+
+  <div class="div-confirmar-contraseña">
+    {{ form.confirmacion }}
+  </div>
+
+
+</form>
 
     <div class="barraceleste"></div>
 
@@ -79,6 +73,7 @@
     <div class="imagenusuario"></div>
 
     <span class="registronuevo">Registro de nuevo usuario</span>
+
 </body>
 
 </html>

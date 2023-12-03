@@ -1,6 +1,6 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from .forms import UserRegistrationForm
-from .models import User
+from .models import Usuario_perfil
 def Index(request):
     return  render(request,'inicio.html')
 # Create your views here.
@@ -8,7 +8,7 @@ def Usuario_r(request):
     if request.method=='GET':
         return  render(request,'Usuario/usuario_r.html',{'form':UserRegistrationForm()})
     else:
-          User.objects.create(
+          Usuario_perfil.objects.create(
             nomusuario=request.POST['nomusuario'],
             nombres=request.POST['nombres'],
             apellidos=request.POST['apellidos'],
@@ -17,7 +17,7 @@ def Usuario_r(request):
             fecha_nacimiento=request.POST['fecha_nacimiento'],
             correo=request.POST['correo'],
             contraseña=request.POST['contraseña'])
-
+    return redirect("/")
 def Gastos_Ingreso_modulo(request):
     return render(request,'Gastos_Ingresos_modulo.html')
 

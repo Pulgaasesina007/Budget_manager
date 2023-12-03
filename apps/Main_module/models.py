@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class User(models.Model):
+class Usuario_perfil(models.Model):
 
     nomusuario = models.CharField(max_length=100)
     nombres = models.CharField(max_length=100, null=False)
@@ -12,6 +12,5 @@ class User(models.Model):
     fecha_nacimiento = models.DateField(null=False)
     correo = models.EmailField(null=False)
     contraseña = models.CharField(max_length=100, null=False)
-
-
-
+    def __str__(self):
+        return self.nomusuario
