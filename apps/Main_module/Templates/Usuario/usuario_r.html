@@ -9,71 +9,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
-    <link href="{% static './css/registro_usuario.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/registro_usuario.css' %}" rel="stylesheet" />
 
-    <title>Registro de nuevo usuario</title>
+    <title>Document</title>
 </head>
 
 <body>
-   <form method="post">
-  {% csrf_token %}
- <div class="div-boton">
-    <button type="submit">Registrarse</button>
-  </div>
+    <form action="{% url 'Usuario_r' %}" method="POST">
+        <div class="form-group name-input-group">
+            {% csrf_token %}
+            <label for="firstName" class="nombres">Nombres:
+                <input type="text" id="firstName" style="width: 400px;" name="nombre" required />
+            </label>
+
+            <label for="lastName" class="apellidos">Apellidos:
+                <input type="text" id="lastName" style="width: 300%;" name="apellidos" required />
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="cedula" class="cedula">Cédula:
+                <input type="text" id="cedula" style="width: 370%;" name="cedula" required />
+            </label>
+
+            <label for="birthdate" class="fechanac">Fecha de nacimiento:
+                <input type="date" id="birthdate" style="width: 120%;" name="fecha_nacimiento" required />
+            </label>
+            <div class="iconoCalendario"></div>
+
+            <label for="email" class="correo">Correo:
+                <input type="email" id="email" style="width: 790%;" name="correo" required />
+            </label>
+
+            <label for="phone" class="telefono">Teléfono:
+                <input type="tel" id="phone" name="telefono" style="width: 630%;" required />
+            </label>
+
+            <label for="usua" class="nombreusuario">Nombre de usuario:
+                <input type="nomusu" id="usua" name="username" style="width: 225%;" required />
+            </label>
+
+            <label for="contra" class="contraseña">Contraseña:
+                <input type="contrase" id="contra" name="password1"style="width: 100%;" required />
+            </label>
+
+            <label for="conf" class="confirmarcontra">Confirmar contraseña:
+                <input type="confirmacion" id="conf" name="password2" style="width: 115%;" required />
+            </label>
+        </div>
+        </div>
+
+
+        <div class="botonverde" >
+            <button >Registrar</button>
+        </div>
+        </form>
+        <div class="barraceleste"></div>
+
+
+        <span class="nomproyecto">BUDGET MASTER</span>
+        <a href="/" class="inicio">Inicio</a>
+        <span class="separador"> > </span>
+        <div class="iconoSalir"></div>
+
+        <a href="usuario_r.html" class="registrousuario">Registro de usuario</a>
+        <div class="imagenusuario"></div>
 
 
 
-  <div class="div-nombres">
-    {{ form.nombres }}
-  </div>
 
-  <div class="div-apellidos">
-    {{ form.apellidos }}
-  </div>
-
-  <div class="div-cedula">
-    {{ form.cedula }}
-  </div>
-
-  <div class="div-fecha-nacimiento">
-    {{ form.fecha_nacimiento }}
-  </div>
-
-  <div class="div-correo">
-    {{ form.correo }}
-  </div>
-
-  <div class="div-telefono">
-    {{ form.telefono }}
-  </div>
-
-  <div class="div-nombre-usuario">
-    {{ form.nomusuario }}
-  </div>
-
-  <div class="div-contraseña">
-    {{ form.contraseña }}
-  </div>
-
-  <div class="div-confirmar-contraseña">
-    {{ form.confirmacion }}
-  </div>
-
-
-</form>
-
-    <div class="barraceleste"></div>
-
-    <span class="nomproyecto">BUDGET MASTER</span>
-    <a href="" class="inicio">Inicio</a>
-    <span class="separador"> > </span>
-    <div class="iconoSalir"></div>
-
-    <a href="" class="registrousuario">Registro de usuario</a>
-    <div class="imagenusuario"></div>
-
-    <span class="registronuevo">Registro de nuevo usuario</span>
-
+        <span class="registronuevo">Registro de nuevo usuario</span>
+    </div>
 </body>
 
 </html>

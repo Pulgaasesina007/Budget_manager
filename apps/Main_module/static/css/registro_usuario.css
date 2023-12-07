@@ -38,26 +38,26 @@ form {
   left: 20px;
 }
 
-.div-nombre-usuario {
+.div-username {
   position: absolute;
   top: 350px;
   left: 20px;
 }
 
-.div-contraseña {
+.div-password1 {
   position: absolute;
   top: 400px;
   left: 20px;
 }
 
-.div-confirmar-contraseña {
+.div-password2 {
   position: absolute;
   top: 450px;
   left: 20px;
 }
 
 .div-boton {
-  text-align: center;
+  position: absolute;
   top: 500px;
   left: 20px;
 }

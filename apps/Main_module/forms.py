@@ -1,48 +1,27 @@
 from django import forms
+from django.contrib.auth.forms import  AuthenticationForm
+from .models import user_perfil
+
+class Register_User(forms.ModelForm):
+    password1 = forms.CharField(widget=forms.PasswordInput)
+    password2 = forms.CharField(widget=forms.PasswordInput, label='Confirmar contraseña')
+
+    class Meta:
+        model = user_perfil
+        fields = ['username', 'password1', 'password2']
+
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError('Las contraseñas no coinciden.')
+
+        return password2
 
 
-class UserRegistrationForm(forms.Form):
-    nombres = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'nombres',
-        'placeholder': 'Ingrese sus nombres',
-    }))
 
-    apellidos = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'apellidos',
-        'placeholder': 'Ingrese sus apellidos',
-    }))
 
-    cedula = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'cedula',
-        'placeholder': 'Ingrese su cédula',
-    }))
-
-    fecha_nacimiento = forms.DateField(widget=forms.TextInput(attrs={
-        'class': 'fechanac',
-        'placeholder': 'Fecha de nacimiento',
-    }))
-
-    correo = forms.EmailField(widget=forms.EmailInput(attrs={
-        'class': 'correo',
-        'placeholder': 'Ingrese su correo electrónico',
-    }))
-
-    telefono = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'telefono',
-        'placeholder': 'Ingrese su teléfono',
-    }))
-
-    nomusuario = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'nombreusuario',
-        'placeholder': 'Ingrese su nombre de usuario',
-    }))
-
-    contraseña = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'contraseña',
-        'placeholder': 'Ingrese su contraseña',
-    }))
-
-    confirmacion = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'confirmarcontra',
-        'placeholder': 'Confirme su contraseña',
-    }))
+class Login_user(AuthenticationForm):
+    username = forms.CharField
+    password = forms.CharField(widget=forms.PasswordInput)

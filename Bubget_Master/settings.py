@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'apps.Main_module.urls'
+ROOT_URLCONF = 'Bubget_Master.urls'
 
 TEMPLATES = [
     {
@@ -66,11 +66,12 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
+
             ],
         },
     },
 ]
-
+AUTH_USER_MODEL = 'Main_module.user_perfil'
 WSGI_APPLICATION = 'Bubget_Master.wsgi.application'
 
 
