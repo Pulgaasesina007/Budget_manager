@@ -9,7 +9,7 @@ urlpatterns = [
     path('actualizar_datos/', views.usuario_act_dat),
     path('Home/Perfil_usuario/cambiar_contraseña/', views.cambiar_contraseña),
     path('Usuario_r/',views.Usuario_r,name = 'Usuario_r'),
-    path('Home/Perfil_usuario/',views.Perfil_usuario),
+    path('Home/Perfil_usuario/',login_required(views.Perfil_usuario), name='Perfil_usuario'),
     path('',views.login_usuario, name = 'login_usuario'),
     path('login/', LogoutView.as_view(template_name='Usuario/Login_usuario.html'), name='logout')
 

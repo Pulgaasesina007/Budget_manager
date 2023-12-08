@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from django.contrib.auth import authenticate,login
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from .forms import Register_User,Login_user
@@ -81,7 +81,10 @@ def login_usuario(request):
     return render(request, 'Usuario/Login_usuario.html', {'form': form, 'mensaje_error': mensaje_error, 'next': request.GET.get('next', '')})
 
 def Perfil_usuario(request):
-    return render(request,'./Usuario/actualizar_datos.html')
+    perfil = get_object_or_404(user_perfil, username=request.user.username)
+    print(perfil)
+    return render(request, 'Usuario/Perfil_user.html', {'datos': perfil})
+
 def usuario_act_dat(request):
     return render(request,'./Usuario/actualizar_datos.html')
 def cambiar_contraseña(request):
