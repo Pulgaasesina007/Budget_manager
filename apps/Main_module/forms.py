@@ -1,14 +1,13 @@
 from django import forms
 from django.contrib.auth.forms import  AuthenticationForm
 from .models import user_perfil
-
 class Register_User(forms.ModelForm):
     password1 = forms.CharField(widget=forms.PasswordInput)
     password2 = forms.CharField(widget=forms.PasswordInput, label='Confirmar contraseña')
 
     class Meta:
         model = user_perfil
-        fields = ['username', 'password1', 'password2']
+        fields = ['username', 'password1', 'password2','nombres','correo','apellidos','telefono','fecha_nacimiento','cedula']
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
