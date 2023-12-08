@@ -3,18 +3,17 @@ from django.contrib.auth import authenticate,login
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from .forms import Register_User,Login_user
 from .models import user_perfil
-from django.contrib.auth import authenticate, login,logout
+from django.contrib.auth import authenticate, login
 
 def Index(request):
     return  render(request,'inicio.html')
 # Create your views here.
+
 def Usuario_r(request):
     if request.method == 'POST':
         print("POST a")
         form = Register_User(request.POST)
         if form.is_valid():
-
-
             if user_perfil.objects.filter(username=form.cleaned_data['username']).exists():
                 print("usuario ya existe")
                 form.add_error('username', 'Este usuario ya existe')
@@ -23,15 +22,15 @@ def Usuario_r(request):
                 user = form.save(commit=False)
                 user.set_password(form.cleaned_data['password1'])
                 user.save()
-                user = authenticate(request, username=form.cleaned_data['username'],password=form.cleaned_data['password1'])
+                user = authenticate(request, username=form.cleaned_data['username'], password=form.cleaned_data['password1'])
                 login(request, user)
                 return redirect('/Home')
         else:
-            form = Register_User()
             print(form.errors)
             print("error form no valido ")
-    return  render(request,'Usuario/usuario_r.html',{'form':form})
-
+    else:
+        form = Register_User()  # Mover la inicialización del formulario fuera del bloque 'if'
+    return render(request, 'Usuario/usuario_r.html', {'form': form})
 def Gastos_Ingreso_modulo(request):
     return render(request,'Gastos_Ingresos_modulo.html')
 
