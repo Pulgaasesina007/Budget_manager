@@ -44,34 +44,36 @@
     <title>Document</title>
 </head>
 
+
 <body>
-    <form action=" "  >
+    <form method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
         <div class="form-group name-input-group">
             <label for="firstName" class="nombres">Nombres:
-                <input type="text" id="firstName" style="width: 400px;" name="firstName" required />
+                <input type="text" id="firstName" style="width: 400px;" name="nombres" value="{{ perfil.user.nombres }}"   required />
             </label>
 
             <label for="lastName" class="apellidos">Apellidos:
-                <input type="text" id="lastName" style="width: 300%;" name="lastName" required />
+                <input type="text" id="lastName" style="width: 300%;" name="apellidos" value="{{ perfil.user.apellidos }}" required />
             </label>
         </div>
 
         <div class="form-group">
             <label for="cedula" class="cedula">Cédula:
-                <input type="text" id="cedula" style="width: 370%;" name="cedula" required />
+                <input type="text" id="cedula" style="width: 370%;" name="cedula" value="{{ perfil.user.cedula }}" required />
             </label>
 
             <label for="birthdate" class="fechanac">Fecha de nacimiento:
-                <input type="date" id="birthdate" style="width: 120%;" name="birthdate" required />
+                <input type="date" id="birthdate" style="width: 120%;" name="fecha_nacimiento" value="{{ perfil.user.fecha_nacimiento }}" required />
             </label>
             <div class="iconoCalendario"></div>
 
             <label for="email" class="correo">Correo:
-                <input type="email" id="email" style="width: 790%;" name="email" required />
+                <input type="email" id="email" style="width: 790%;" name="correo" value="{{ perfil.user.correo }}" required />
             </label>
 
             <label for="phone" class="telefono">Teléfono:
-                <input type="tel" id="phone" name="phone" style="width: 630%;" required />
+                <input type="tel" id="phone" name="telefono" style="width: 630%;" {{ perfil.user.telefono }} required />
             </label>
 
             
@@ -82,22 +84,22 @@
         <div class="botonverde">
             <button type="submit" class="guardarcambios">Guardar cambios</button>
         </div>
-        
+        </form>
         <div class="barraceleste"></div>
         
         
         <span class="nomproyecto">BUDGET MASTER</span>
-        <a href="url_de_la_pagina_de_inicio" class="inicio">Inicio</a>
+        <a href="{% url 'Home' %}" class="inicio">Inicio</a>
         <span class="separador1"> > </span>
         <div class="iconoSalir"></div>
        
         <span class="actualizardatos">Actualizar datos</span>
-        <a href="url_de_la_pagina_de_registro" class="enlaceperfil">Perfil</a>
+        <a href="{% url 'Perfil_usuario' %}" class="enlaceperfil">Perfil</a>
         
         <span class="separador2"> > </span>
 
         <b>
-           <span class="perfil">Perfil</span> 
+           <span class="perfil">Perfil</span>
         </b>
         
 

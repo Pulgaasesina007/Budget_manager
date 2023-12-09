@@ -85,6 +85,10 @@ def Perfil_usuario(request):
     return render(request, 'Usuario/Perfil_user.html', {'datos': perfil})
 
 def usuario_act_dat(request):
-    return render(request,'./Usuario/actualizar_datos.html')
+    perfil= get_object_or_404(user_perfil,username=request.user.username)
+
+    return render(request,'./Usuario/actualizar_datos.html',   {
+        'perfil': perfil
+    })
 def cambiar_contraseña(request):
     return  render(request,'./Usuario/cambiar_contraseña.html')

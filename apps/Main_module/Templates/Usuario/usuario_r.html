@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
-    <link href="{% static 'css/registro_usuario.css' %}" rel="stylesheet" />
-
+ <link rel="stylesheet" href="{% static 'css/Usuario_r.css' %}">
     <title>Document</title>
 </head>
 
@@ -19,7 +18,7 @@
         <div class="form-group name-input-group">
             {% csrf_token %}
             <label for="firstName" class="nombres">Nombres:
-                <input type="text" id="firstName" style="width: 400px;" name="nombres" required />
+                <input type="text" id="nombres" style="width: 400px;" name="nombres" required />
             </label>
 
             <label for="lastName" class="apellidos">Apellidos:
