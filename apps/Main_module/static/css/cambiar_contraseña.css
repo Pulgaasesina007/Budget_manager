@@ -303,7 +303,7 @@
   .cambiarcontraseña:hover,
   .cerrarsesión:hover {
     background-color: blue; /* Cambia "yourHoverColor" al color que desees */
-    color: ; /* Cambia al color de texto deseado cuando el fondo cambia */
+     ; /* Cambia al color de texto deseado cuando el fondo cambia */
   }
   .imgcorchete{
     width: 40px; /* Ajusta el ancho según tus necesidades */

@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from .forms import Register_User,Login_user
 from .models import user_perfil
 from django.contrib.auth import authenticate, login
+from django.shortcuts import redirect
+from django.contrib.auth import logout
 
 def Index(request):
     return  render(request,'inicio.html')
@@ -92,3 +94,10 @@ def usuario_act_dat(request):
     })
 def cambiar_contraseña(request):
     return  render(request,'./Usuario/cambiar_contraseña.html')
+
+def cerrar_sesion_view(request):
+    # Cierra la sesión del usuario
+    logout(request)
+
+    # Redirige a la página de inicio
+    return redirect('Index')
