@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título predeterminado{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link href="{% static 'css/Gastos_Ingresos_modulo.css' %}" rel="stylesheet" />
+
+    {% block extra_css %}{% endblock %}</head>
+<body>
+    <div class="content">
+            <div class="barraceleste">
+      <span class="nomproyecto">BUDGET MASTER</span>
+
+        <a href="{% url 'logout'  %}">
+             <button class="iconoSalir">
+             </button>
+          </a>
+    </div>
+      </div>
+    </div>
+    <div class="name"></div>
+
+
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

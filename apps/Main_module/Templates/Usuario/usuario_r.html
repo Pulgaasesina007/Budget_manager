@@ -9,11 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
- <link rel="stylesheet" href="{% static 'css/Usuario_r.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Usuario_r.css' %}">
     <title>Document</title>
 </head>
 
 <body>
+
+
     <form action="{% url 'Usuario_r' %}" method="POST">
         <div class="form-group name-input-group">
             {% csrf_token %}
@@ -69,7 +71,10 @@
         <span class="nomproyecto">BUDGET MASTER</span>
         <a href="/" class="inicio">Inicio</a>
         <span class="separador"> > </span>
-        <div class="iconoSalir"></div>
+        <div class="iconoSalir">
+            <a href="{% url 'cerrar_sesion' %}" class="iconoSalir"></a>
+        </div>
+
 
         <a href="usuario_r.html" class="registrousuario">Registro de usuario</a>
         <div class="imagenusuario"></div>
@@ -78,7 +83,8 @@
 
 
         <span class="registronuevo">Registro de nuevo usuario</span>
-    </div>
+
+        </div>
 </body>
 
 </html>

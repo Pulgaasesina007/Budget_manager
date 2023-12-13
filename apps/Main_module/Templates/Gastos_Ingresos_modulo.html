@@ -1,15 +1,11 @@
+{% extends 'base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Zen+Dots&display=swap" rel="stylesheet" />
-  <link href="{% static 'css/Gastos_Ingresos_modulo.css' %}" rel="stylesheet" />
-  <title>Document</title>
-</head>
-<body>
+{% block title %}Gastos e Ingresos{% endblock %}
 
+
+{% block content %}
 
     <div class="cuadroAingresos"></div>
     <span class="agregaringreso">  AGREGAR INGRESOS </span>
@@ -27,9 +23,6 @@
     <div class="separador"></div>
 
     <a href="url_de_la_pagina_de_inicio" class="inicio">Inicio</a>
-    <div class="barraceleste"></div>
-    <span class="nomproyecto">BUDGET MASTER</span>
-    <div class="iconoSalir"></div>
 
-</body>
-</html>
+
+{%endblock%}
