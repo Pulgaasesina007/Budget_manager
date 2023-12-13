@@ -15,18 +15,21 @@
 </head>
 
 <body>
-    <form action="URL_del_script_de_procesamiento" method="método_de_envío">
+    <form action="{% url 'act_password' %}" method="post">
+        {% csrf_token %}
         <div class="form-group">
-            <label for="act" class="actual">Actual:
-                <input type="text" id="act" style="width: 370%;" name="act" required />
-            </label>
+       <div class="actual">
+    <label for="act">Actual:</label>
+    <input type="text" id="act" style="width: 370%;" name="act" value="{{ perfil.password }}" required />
+</div>
+
 
             <label for="" class="nuevacontraseña">Nueva contraseña:
-                <input type="text" id="nwcontra"  name="nwcontra" required />
+                <input type="text" id="nwcontra"  name="password1" required />
             </label>
 
             <label for="" class="confirmarcontraseña">Confirmar contraseña:
-                <input type="text" id="confcontra"  name="confcontra" required />
+                <input type="text" id="confcontra"  name="password2" required />
             </label>
 
            
@@ -37,7 +40,7 @@
         <div class="botonverde">
             <button type="submit" class="guardarcambios">Guardar cambios</button>
         </div>
-        
+        </form>
         <div class="barraceleste"></div>
         
         
@@ -62,7 +65,7 @@
         <!-- <div class="fondocambcontraseña"></div> -->
         <a href="url_de_la_pagina_de_registro" class="cambiarcontraseña">Cambiar contraseña</a>
         <!-- <div class="fondocerrarsesion"></div> -->
-        <a href="url_de_la_pagina_de_registro" class="cerrarsesión">Cerrar sesión</a>
+        <a href="{% url 'logout' %}" class="cerrarsesión">Cerrar sesión</a>
 
         
         <span class="imgcorchete"></span>

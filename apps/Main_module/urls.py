@@ -7,7 +7,7 @@ urlpatterns = [
     path('Home/', views.Index, name='Home'),
     path('Home/Gastos_Ingreso_modulo/', views.Gastos_Ingreso_modulo, name= 'Ingreso_modulo'),
     path('actualizar_datos/', login_required(views.usuario_act_dat),name='usuario_act_dat'),
-    path('Home/Perfil_usuario/cambiar_contraseña/', views.cambiar_contraseña),
+    path('Home/Perfil_usuario/cambiar_contraseña/', login_required(views.act_password),name = 'act_password'),
     path('Usuario_r/',views.Usuario_r,name = 'Usuario_r'),
     path('Home/Perfil_usuario/',login_required(views.Perfil_usuario), name='Perfil_usuario'),
     path('',views.login_usuario, name = 'login_usuario'),

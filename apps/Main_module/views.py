@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from django.contrib.auth import authenticate,login
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
-from .forms import Register_User,Login_user
+from .forms import Register_User,Login_user,CambiarContraseñaForm
 from .models import user_perfil
 from django.contrib.auth import authenticate, login
 
@@ -90,5 +90,24 @@ def usuario_act_dat(request):
     return render(request,'./Usuario/actualizar_datos.html',   {
         'perfil': perfil
     })
-def cambiar_contraseña(request):
-    return  render(request,'./Usuario/cambiar_contraseña.html')
+
+
+def act_password(request):
+    perfil = get_object_or_404(user_perfil, username=request.user.username)
+
+    if request.method == 'POST':
+        form = CambiarContraseñaForm(request.POST)
+
+        if form.is_valid():
+            password1 = form.cleaned_data['password1']
+
+            # Actualizar la contraseña del usuario
+            request.user.set_password(password1)
+            request.user.save()
+            next_url = request.POST.get('next') or 'logout'
+            return redirect(next_url)
+
+    else:
+        form = CambiarContraseñaForm()
+
+    return render(request, './Usuario/cambiar_contraseña.html', {'form': form, 'perfil': perfil})
